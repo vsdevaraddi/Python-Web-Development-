@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>DOWNLOAD</title>
+</head>
+<body>
+        <h2><form action="" method = "POST" >ENTER &nbsp THE &nbsp FILE &nbsp NAME &nbsp YOU &nbsp WANTED &nbsp TO &nbsp DOWNLOAD
+                        <input type = "text" name = "download" >
+			<input type= "submit"><br><br></form>
+
+                The Uploaded Files are: </h2><br>
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+                {% for message in messages %}
+                   <h3>{{ message }}</h3>
+                {% endfor %}
+        {% endif %}
+{% endwith %}
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>VIEW</title>
+</head>
+<body>
+        <h2><form action="" method = "POST" >
+			<input type = "text" name = "view" >
+			<input type= "submit"><br><br>
+
+			The Uploaded Files are: </h2><br></form>
+
+{% with messages = get_flashed_messages() %}
+   	{% if messages %}
+		{% for message in messages %}
+		   <h3>{{ message }}</h3>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+</body>
+</html>
+
